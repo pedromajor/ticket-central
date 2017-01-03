@@ -1,0 +1,82 @@
+.css-transition-container {
+    margin-top: 10px;
+}
+
+.css-transition-item {
+    text-align: center;
+    /* width: 150px; */
+    color: white;
+    background-color: #0DACE0;
+    /* padding: 10px; */
+    cursor: pointer;
+}
+
+.my-transition-enter {
+    background-color: #654B8E;
+    /* transition: opacity 5s ease-in; */
+}
+
+.my-transition-enter.my-transition-enter-active {
+    /* opacity: 1; */
+}
+
+.my-transition-leave {
+    opacity: 0.5;
+    transition: opacity 2.2s ease-in;
+}
+
+.my-transition-leave.my-transition-leave-active {
+    opacity: 0.01;
+}
+
+.blink_div {
+    /* -webkit-animation-name: blinker; */
+    /* -webkit-animation-duration: 3s; */
+    /* -webkit-animation-timing-function: linear; */
+    /* -webkit-animation-iteration-count: infinite; */
+    /* -moz-animation-name: blinker; */
+    /* -moz-animation-duration: 3s; */
+    /* -moz-animation-timing-function: linear; */
+    /* -moz-animation-iteration-count: infinite; */
+    animation-name: blinker;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    /* background-color: #0DACE0; */ /* #1FACFF */
+}
+
+@keyframes blinker {
+    0% { opacity: 1.0;      /* background-color: #654B8E; */}
+    50% { opacity: 0.3;     /* background-color: #654B8E; */}
+    100% { opacity: 1.0;    /* background-color: #654B8E; */}
+}
+
+/* @-moz-keyframes blinker { */
+/*     0% { opacity: 1.0; } */
+/*     50% { opacity: 0.3; } */
+/*     100% { opacity: 1.0; } */
+/* } */
+
+/* @-webkit-keyframes blinker { */
+/*     0% { opacity: 1.0; } */
+/*     50% { opacity: 0.3; } */
+/*     100% { opacity: 1.0; } */
+/* } */
+
+.tile {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* position: absolute; */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 350ms, opacity 350ms;
+    -moz-transition: -webkit-transform 350ms, opacity 350ms;
+    -moz-transition: -moz-transform 350ms, opacity 350ms;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+}
+
+.tile.update {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
